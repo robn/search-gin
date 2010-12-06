@@ -69,14 +69,12 @@ __END__
         subqueries => [
             Search::GIN::Query::Manual->new(
                 values => {
-                   type => 'pdf',
-                   type => 'png'
+                   type => [qw(pdf png)]
                 }
             ),
             Search::GIN::Query::Manual->new(
                 values => {
-                   name => 'Homer',
-                   name => 'Bart'
+                   name => [qw(Homer Bart)]
                 }
             ),
         ]
